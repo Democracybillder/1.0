@@ -57,6 +57,7 @@ const CGFloat kTextXOrigin = 106;
     [titleLabel sizeToFit];
     CGRect titleFrame = titleLabel.frame;
     titleFrame.origin.y = (headerHeight - titleFrame.size.height) / 2;
+    titleFrame.origin.x = titleOriginX;
     titleLabel.frame = titleFrame;
     [self addSubview:titleLabel];
   }
