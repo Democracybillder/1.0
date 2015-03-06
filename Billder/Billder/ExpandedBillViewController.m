@@ -3,7 +3,9 @@
 #import "Bill.h"
 #import "BillSummaryView.h"
 #import "Header.h"
+#import "RootViewController.h"
 #import "Separator.h"
+#import "ShareViewController.h"
 #import "Translation.h"
 
 @implementation ExpandedBillViewController {
@@ -84,6 +86,9 @@
   UIImageView *shareImage = [[UIImageView alloc] initWithFrame:CGRectMake(nextX, verticalSpace, imageWidth, imageWidth)];
   shareImage.contentMode = UIViewContentModeScaleAspectFit;
   shareImage.image = [UIImage imageNamed:@"share"];
+  shareImage.userInteractionEnabled = YES;
+  UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushSharePane)];
+  [shareImage addGestureRecognizer:tapGR];
   [buttonView addSubview:shareImage];
 
   return buttonView;
@@ -133,6 +138,11 @@
 
   scrollView.contentSize = CGSizeMake(scrollView.frame.size.width, lastY);
   return scrollView;
+}
+
+- (void)pushSharePane {
+  ShareViewController *svc = [[ShareViewController alloc] init];
+  [[RootViewController sharedInstance] pushViewController:svc animated:YES];
 }
 
 @end
