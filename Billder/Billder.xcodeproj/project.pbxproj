@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51EE25AC1AAA451C00AFF8A7 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */; };
 		7FBE50BB1AA3D15E0011F5C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50BA1AA3D15E0011F5C3 /* main.m */; };
 		7FBE50D51AA3D15E0011F5C3 /* BillderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50D41AA3D15E0011F5C3 /* BillderTests.m */; };
 		7FBE50E81AA3D25A0011F5C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50DF1AA3D25A0011F5C3 /* AppDelegate.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51EE25AA1AAA451C00AFF8A7 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		7FBE50B51AA3D15E0011F5C3 /* Billder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FBE50B91AA3D15E0011F5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FBE50BA1AA3D15E0011F5C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 		7FBE510C1AA3D7AF0011F5C3 /* BillDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				51EE25AA1AAA451C00AFF8A7 /* ShareViewController.h */,
+				51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */,
 				7FBE50F51AA3D2620011F5C3 /* ExpandedBillViewController.h */,
 				7FBE50F61AA3D2620011F5C3 /* ExpandedBillViewController.m */,
 			);
@@ -313,6 +318,7 @@
 				7FBE50BB1AA3D15E0011F5C3 /* main.m in Sources */,
 				7FBE50FE1AA3D2620011F5C3 /* BillSummaryView.m in Sources */,
 				7FBE50FB1AA3D2620011F5C3 /* Bill.m in Sources */,
+				51EE25AC1AAA451C00AFF8A7 /* ShareViewController.m in Sources */,
 				7FBE51001AA3D2620011F5C3 /* Header.m in Sources */,
 				7FBE50FF1AA3D2620011F5C3 /* ExpandedBillViewController.m in Sources */,
 				7FBE51011AA3D2620011F5C3 /* ImageFetcher.m in Sources */,
@@ -514,6 +520,7 @@
 				7FBE50DA1AA3D15E0011F5C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FBE50DB1AA3D15E0011F5C3 /* Build configuration list for PBXNativeTarget "BillderTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				7FBE50DD1AA3D15E0011F5C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

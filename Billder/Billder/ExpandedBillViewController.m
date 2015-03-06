@@ -142,7 +142,7 @@
 
 - (void)pushSharePane {
   ShareViewController *svc = [[ShareViewController alloc] init];
-  [[RootViewController sharedInstance] pushViewController:svc animated:YES];
+  [[[RootViewController sharedInstance] paneNavigationController] pushViewController:svc animated:YES];
 }
 
 @end
