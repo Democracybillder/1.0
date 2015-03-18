@@ -21,6 +21,7 @@
 		7F1563F41AB8D461002C88DA /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1563761AB8D461002C88DA /* DDMultiFormatter.m */; };
 		7F15642C1AB8D74E002C88DA /* TCPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15642B1AB8D74E002C88DA /* TCPConnection.m */; };
 		7F15642F1AB8EDA2002C88DA /* NSString+Escaping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15642E1AB8EDA2002C88DA /* NSString+Escaping.m */; };
+		51EE25AC1AAA451C00AFF8A7 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */; };
 		7FBE50BB1AA3D15E0011F5C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50BA1AA3D15E0011F5C3 /* main.m */; };
 		7FBE50D51AA3D15E0011F5C3 /* BillderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50D41AA3D15E0011F5C3 /* BillderTests.m */; };
 		7FBE50E81AA3D25A0011F5C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50DF1AA3D25A0011F5C3 /* AppDelegate.m */; };
@@ -80,6 +81,8 @@
 		7F15642B1AB8D74E002C88DA /* TCPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPConnection.m; sourceTree = "<group>"; };
 		7F15642D1AB8EDA2002C88DA /* NSString+Escaping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Escaping.h"; sourceTree = "<group>"; };
 		7F15642E1AB8EDA2002C88DA /* NSString+Escaping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Escaping.m"; sourceTree = "<group>"; };
+		51EE25AA1AAA451C00AFF8A7 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		7FBE50B51AA3D15E0011F5C3 /* Billder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FBE50B91AA3D15E0011F5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FBE50BA1AA3D15E0011F5C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -310,6 +313,8 @@
 		7FBE510C1AA3D7AF0011F5C3 /* BillDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				51EE25AA1AAA451C00AFF8A7 /* ShareViewController.h */,
+				51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */,
 				7FBE50F51AA3D2620011F5C3 /* ExpandedBillViewController.h */,
 				7FBE50F61AA3D2620011F5C3 /* ExpandedBillViewController.m */,
 			);
@@ -447,6 +452,7 @@
 				7F1563F11AB8D461002C88DA /* DDTTYLogger.m in Sources */,
 				7FBE50FE1AA3D2620011F5C3 /* BillSummaryView.m in Sources */,
 				7FBE50FB1AA3D2620011F5C3 /* Bill.m in Sources */,
+				51EE25AC1AAA451C00AFF8A7 /* ShareViewController.m in Sources */,
 				7FBE51001AA3D2620011F5C3 /* Header.m in Sources */,
 				7F1563F41AB8D461002C88DA /* DDMultiFormatter.m in Sources */,
 				7F1563D01AB8D461002C88DA /* AsyncSocket.m in Sources */,
