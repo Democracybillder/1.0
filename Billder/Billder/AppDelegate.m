@@ -1,7 +1,6 @@
 #import "AppDelegate.h"
 
 #import "RootViewController.h"
-#import "TCPConnection.h"
 
 @interface AppDelegate ()
 
