@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51EE25AC1AAA451C00AFF8A7 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */; };
 		7F1563791AB8D461002C88DA /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15623F1AB8D460002C88DA /* GCDAsyncSocket.m */; };
 		7F15637A1AB8D461002C88DA /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1562411AB8D460002C88DA /* GCDAsyncUdpSocket.m */; };
 		7F1563D01AB8D461002C88DA /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1563201AB8D461002C88DA /* AsyncSocket.m */; };
@@ -21,7 +22,7 @@
 		7F1563F41AB8D461002C88DA /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1563761AB8D461002C88DA /* DDMultiFormatter.m */; };
 		7F15642C1AB8D74E002C88DA /* TCPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15642B1AB8D74E002C88DA /* TCPConnection.m */; };
 		7F15642F1AB8EDA2002C88DA /* NSString+Escaping.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F15642E1AB8EDA2002C88DA /* NSString+Escaping.m */; };
-		51EE25AC1AAA451C00AFF8A7 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */; };
+		7F1564321AB90D45002C88DA /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1564311AB90D45002C88DA /* Request.m */; };
 		7FBE50BB1AA3D15E0011F5C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50BA1AA3D15E0011F5C3 /* main.m */; };
 		7FBE50D51AA3D15E0011F5C3 /* BillderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50D41AA3D15E0011F5C3 /* BillderTests.m */; };
 		7FBE50E81AA3D25A0011F5C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50DF1AA3D25A0011F5C3 /* AppDelegate.m */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51EE25AA1AAA451C00AFF8A7 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		7F15623E1AB8D460002C88DA /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		7F15623F1AB8D460002C88DA /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		7F1562401AB8D460002C88DA /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
@@ -81,8 +84,8 @@
 		7F15642B1AB8D74E002C88DA /* TCPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPConnection.m; sourceTree = "<group>"; };
 		7F15642D1AB8EDA2002C88DA /* NSString+Escaping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Escaping.h"; sourceTree = "<group>"; };
 		7F15642E1AB8EDA2002C88DA /* NSString+Escaping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Escaping.m"; sourceTree = "<group>"; };
-		51EE25AA1AAA451C00AFF8A7 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
-		51EE25AB1AAA451C00AFF8A7 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		7F1564301AB90D45002C88DA /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		7F1564311AB90D45002C88DA /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
 		7FBE50B51AA3D15E0011F5C3 /* Billder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Billder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FBE50B91AA3D15E0011F5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FBE50BA1AA3D15E0011F5C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				7FBE50E71AA3D25A0011F5C3 /* Translation.m */,
 				7F15642D1AB8EDA2002C88DA /* NSString+Escaping.h */,
 				7F15642E1AB8EDA2002C88DA /* NSString+Escaping.m */,
+				7F1564301AB90D45002C88DA /* Request.h */,
+				7F1564311AB90D45002C88DA /* Request.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -460,6 +465,7 @@
 				7FBE50FF1AA3D2620011F5C3 /* ExpandedBillViewController.m in Sources */,
 				7F15642C1AB8D74E002C88DA /* TCPConnection.m in Sources */,
 				7F1563F31AB8D461002C88DA /* DDDispatchQueueLogFormatter.m in Sources */,
+				7F1564321AB90D45002C88DA /* Request.m in Sources */,
 				7FBE51011AA3D2620011F5C3 /* ImageFetcher.m in Sources */,
 				7F1563F21AB8D461002C88DA /* DDContextFilterLogFormatter.m in Sources */,
 				7FBE50FD1AA3D2620011F5C3 /* BillListViewController.m in Sources */,

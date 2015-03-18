@@ -3,6 +3,7 @@
 #import "DDLog.h"
 #import "GCDAsyncSocket.h"
 #import "NSString+Escaping.h"
+#import "Request.h"
 
 static NSString *const kHostName = @"localhost";
 static const uint16_t kPort = 8080;
@@ -12,7 +13,7 @@ static const NSUInteger kSizingBytes = 15;  // THIS MUST BE THE SAME VALUE AS IN
 @interface TCPConnection() <GCDAsyncSocketDelegate>
 
 @property(nonatomic, strong) void (^completion)(NSDictionary *response, NSError *error);
-@property(nonatomic) NSString *request;
+@property(nonatomic) Request *request;
 @property(nonatomic) GCDAsyncSocket *socket;
 @property(nonatomic) NSInteger responseSize;
 
@@ -22,7 +23,7 @@ static const NSUInteger kSizingBytes = 15;  // THIS MUST BE THE SAME VALUE AS IN
   BOOL _completed;
 }
 
-+ (instancetype)connectionWithRequest:(NSString *)request
++ (instancetype)connectionWithRequest:(Request *)request
                            completion:(void (^)(NSDictionary *response, NSError *error))completion {
   TCPConnection *connection = [[TCPConnection alloc] init];
   connection.socket = [[GCDAsyncSocket alloc] initWithDelegate:connection
@@ -57,7 +58,7 @@ static const NSUInteger kSizingBytes = 15;  // THIS MUST BE THE SAME VALUE AS IN
 - (void)socket:(GCDAsyncSocket *)socket didConnectToHost:(NSString *)host port:(uint16_t)port {
   NSLog(@"socket:%@didConnectToHost:%@ port:%hu", socket, host, port);
 
-  NSData *requestData = [self.request dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *requestData = [self.request dataValue];
   NSUInteger requestLength = [requestData length];
   NSString *requestLengthString = [NSString stringWithFormat:@"%lu", requestLength];
 
@@ -65,11 +66,13 @@ static const NSUInteger kSizingBytes = 15;  // THIS MUST BE THE SAME VALUE AS IN
     requestLengthString = [@"0" stringByAppendingString:requestLengthString];
   }
 
-  NSString *requestString = [requestLengthString stringByAppendingString:self.request];
-  requestData = [requestString dataUsingEncoding:NSUTF8StringEncoding];
+  NSData *requestLengthData = [requestLengthString dataUsingEncoding:NSUTF8StringEncoding];
+  NSMutableData *requestMutableData = [requestLengthData mutableCopy];
+  [requestMutableData appendData:requestData];
 
-  [socket writeData:requestData withTimeout:kTimeout tag:0];
-  NSLog(@"Sent socket %@ request %@", socket, requestString);
+  [socket writeData:requestMutableData withTimeout:kTimeout tag:0];
+  NSLog(@"Sent socket %@ request %@", socket, [[NSString alloc] initWithData:requestMutableData
+                                                                    encoding:NSUTF8StringEncoding]);
 
   [socket readDataToLength:kSizingBytes withTimeout:kTimeout tag:0];
 }

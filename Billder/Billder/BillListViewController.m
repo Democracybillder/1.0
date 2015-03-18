@@ -5,6 +5,9 @@
 #import "Header.h"
 #import "RootViewController.h"
 
+static const NSUInteger kNumberOfBillsPerInitialRequest = 24;
+static const NSUInteger kNumberOfBillsPerAdditionalRequest = 12;
+
 @interface BillListViewController ()
 
 @end
@@ -17,7 +20,9 @@
   BOOL (^_predicate)(Bill *bill);
 }
 
-- (instancetype) initWithTitle:(NSString *)title predicate:(BOOL (^)(Bill *bill))predicate isRoot:(BOOL)isRoot {
+- (instancetype)initWithTitle:(NSString *)title
+                    predicate:(BOOL (^)(Bill *bill))predicate
+                       isRoot:(BOOL)isRoot {
   self = [self initWithNibName:nil bundle:nil];
   if (self) {
     _predicate = predicate;
@@ -30,11 +35,21 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view.
-  Header *header = [[Header alloc] initWithWidth:self.view.bounds.size.width title:_title hasSettings:YES hasCloseButton:!_isRoot];
+  Header *header = [[Header alloc] initWithWidth:self.view.bounds.size.width
+                                           title:_title
+                                     hasSettings:YES
+                                  hasCloseButton:!_isRoot];
   [self.view addSubview:header];
 
-  _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(header.frame), self.view.bounds.size.width, self.view.bounds.size.height - CGRectGetMaxY(header.frame))];
-  _scrollView.backgroundColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1];
+  _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(
+      0,
+      CGRectGetMaxY(header.frame),
+      self.view.bounds.size.width,
+      self.view.bounds.size.height - CGRectGetMaxY(header.frame))];
+  _scrollView.backgroundColor = [UIColor colorWithRed:230.0/255.0
+                                                green:230.0/255.0
+                                                 blue:230.0/255.0
+                                                alpha:1];
   _scrollView.bounces = YES;
   _scrollView.alwaysBounceVertical = YES;
   [self.view addSubview:_scrollView];
