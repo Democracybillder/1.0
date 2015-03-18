@@ -6,7 +6,8 @@
 
 static NSString *const kHostName = @"localhost";
 static const uint16_t kPort = 8080;
-static const NSTimeInterval kTimeout = 5; // Kept low for testing. Should be increased for release.
+static const NSTimeInterval kTimeout = 30; // Kept low for testing. Should be increased for release.
+static const NSUInteger kSizingBytes = 15;  // THIS MUST BE THE SAME VALUE AS IN THE SERVER.
 
 @interface TCPConnection() <GCDAsyncSocketDelegate>
 
@@ -58,14 +59,19 @@ static const NSTimeInterval kTimeout = 5; // Kept low for testing. Should be inc
 
   NSData *requestData = [self.request dataUsingEncoding:NSUTF8StringEncoding];
   NSUInteger requestLength = [requestData length];
-  NSString *requestLengthString = [NSString stringWithFormat:@"%010lu", requestLength];
+  NSString *requestLengthString = [NSString stringWithFormat:@"%lu", requestLength];
+
+  while (requestLengthString.length < kSizingBytes) {
+    requestLengthString = [@"0" stringByAppendingString:requestLengthString];
+  }
+
   NSString *requestString = [requestLengthString stringByAppendingString:self.request];
   requestData = [requestString dataUsingEncoding:NSUTF8StringEncoding];
 
   [socket writeData:requestData withTimeout:kTimeout tag:0];
   NSLog(@"Sent socket %@ request %@", socket, requestString);
 
-  [socket readDataToLength:10 withTimeout:kTimeout tag:0];
+  [socket readDataToLength:kSizingBytes withTimeout:kTimeout tag:0];
 }
 
 - (void)socket:(GCDAsyncSocket *)socket didWriteDataWithTag:(long)tag {
@@ -76,7 +82,7 @@ static const NSTimeInterval kTimeout = 5; // Kept low for testing. Should be inc
   NSString *response = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
   NSLog(@"Read response for socket %@", socket);
   if (self.responseSize < 0) {
-    NSString *lengthString = [response substringToIndex:10];
+    NSString *lengthString = [response substringToIndex:kSizingBytes];
     self.responseSize = [lengthString integerValue];
     [socket readDataToLength:self.responseSize withTimeout:kTimeout tag:0];
   } else if (self.completion) {
