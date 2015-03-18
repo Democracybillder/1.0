@@ -16,6 +16,7 @@ typedef enum {
 
 @interface Bill : NSObject
 
+@property(nonatomic) NSString *billId;
 @property(nonatomic) NSString *imageUrl;
 @property(nonatomic) NSArray *translations;
 @property(nonatomic) NSString *voteDate;
