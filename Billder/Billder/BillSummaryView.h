@@ -23,8 +23,6 @@ extern const CGFloat kBillSummaryRowHeight;
 
 - (instancetype)initWithBill:(Bill *)bill width:(CGFloat)width;
 
-- (void)pushBillView;
-
 - (void)resetView;
 
 @end

@@ -133,7 +133,7 @@ static const CGFloat kTextMargin = 10;
   if (enableListGestures) {
     if (!_tapGestureRecognizer) {
       _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                      action:@selector(pushBillView)];
+                                                                      action:@selector(pushExpandedBillView)];
     }
     [self addGestureRecognizer:_tapGestureRecognizer];
 
@@ -178,7 +178,7 @@ static const CGFloat kTextMargin = 10;
   [self.delegate billSummaryViewWasSwiped:self];
 }
 
-- (void)pushBillView {
+- (void)pushExpandedBillView {
   ExpandedBillViewController *viewController = [[ExpandedBillViewController alloc] initWithBill:_bill];
   [[[RootViewController sharedInstance] paneNavigationController] pushViewController:viewController animated:YES];
 }
