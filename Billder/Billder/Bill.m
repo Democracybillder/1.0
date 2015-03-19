@@ -3,8 +3,8 @@
 @implementation Bill
 
 - (UIColor *)fillColor {
-  if (self.govVote != VoteStatusNoVote) {
-    return [Bill colorForVoteStatus:self.govVote];
+  if (self.userVote != VoteStatusNoVote) {
+    return [Bill colorForVoteStatus:self.userVote];
   } else {
     return [Bill colorForScope:self.scope];
   }

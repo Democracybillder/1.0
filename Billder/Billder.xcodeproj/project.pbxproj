@@ -31,7 +31,6 @@
 		7FBE50EB1AA3D25A0011F5C3 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50E51AA3D25A0011F5C3 /* SettingsViewController.m */; };
 		7FBE50EC1AA3D25A0011F5C3 /* Translation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50E71AA3D25A0011F5C3 /* Translation.m */; };
 		7FBE50FB1AA3D2620011F5C3 /* Bill.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50EE1AA3D2620011F5C3 /* Bill.m */; };
-		7FBE50FC1AA3D2620011F5C3 /* BillListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50F01AA3D2620011F5C3 /* BillListView.m */; };
 		7FBE50FD1AA3D2620011F5C3 /* BillListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50F21AA3D2620011F5C3 /* BillListViewController.m */; };
 		7FBE50FE1AA3D2620011F5C3 /* BillSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50F41AA3D2620011F5C3 /* BillSummaryView.m */; };
 		7FBE50FF1AA3D2620011F5C3 /* ExpandedBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBE50F61AA3D2620011F5C3 /* ExpandedBillViewController.m */; };
@@ -104,8 +103,6 @@
 		7FBE50E71AA3D25A0011F5C3 /* Translation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Translation.m; sourceTree = "<group>"; };
 		7FBE50ED1AA3D2620011F5C3 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bill.h; sourceTree = "<group>"; };
 		7FBE50EE1AA3D2620011F5C3 /* Bill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bill.m; sourceTree = "<group>"; };
-		7FBE50EF1AA3D2620011F5C3 /* BillListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillListView.h; sourceTree = "<group>"; };
-		7FBE50F01AA3D2620011F5C3 /* BillListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillListView.m; sourceTree = "<group>"; };
 		7FBE50F11AA3D2620011F5C3 /* BillListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillListViewController.h; sourceTree = "<group>"; };
 		7FBE50F21AA3D2620011F5C3 /* BillListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillListViewController.m; sourceTree = "<group>"; };
 		7FBE50F31AA3D2620011F5C3 /* BillSummaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillSummaryView.h; sourceTree = "<group>"; };
@@ -288,8 +285,6 @@
 		7FBE510A1AA3D7650011F5C3 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
-				7FBE50EF1AA3D2620011F5C3 /* BillListView.h */,
-				7FBE50F01AA3D2620011F5C3 /* BillListView.m */,
 				7FBE50F11AA3D2620011F5C3 /* BillListViewController.h */,
 				7FBE50F21AA3D2620011F5C3 /* BillListViewController.m */,
 				7FBE50F31AA3D2620011F5C3 /* BillSummaryView.h */,
@@ -469,7 +464,6 @@
 				7FBE51011AA3D2620011F5C3 /* ImageFetcher.m in Sources */,
 				7F1563F21AB8D461002C88DA /* DDContextFilterLogFormatter.m in Sources */,
 				7FBE50FD1AA3D2620011F5C3 /* BillListViewController.m in Sources */,
-				7FBE50FC1AA3D2620011F5C3 /* BillListView.m in Sources */,
 				7F15642F1AB8EDA2002C88DA /* NSString+Escaping.m in Sources */,
 				7FBE50EB1AA3D25A0011F5C3 /* SettingsViewController.m in Sources */,
 				7FBE50EC1AA3D25A0011F5C3 /* Translation.m in Sources */,

@@ -2,9 +2,8 @@
 
 @class Bill;
 
-@interface BillListViewController : UIViewController
+@interface BillListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 - (instancetype) initWithTitle:(NSString *)title predicate:(BOOL (^)(Bill *bill))predicate isRoot:(BOOL)isRoot;
-- (void)resizeScrollView;
 
 @end

@@ -1,14 +1,30 @@
 #import <UIKit/UIKit.h>
 
 @class Bill;
+@class BillSummaryView;
 
+extern const CGFloat kBillSummaryRowHeight;
 
-@interface BillSummaryView : UIView
+@protocol BillSummaryViewDelegate <NSObject>
 
-@property(nonatomic, readonly) Bill *bill;
+- (void)billSummaryViewWasSwiped:(BillSummaryView *)billSummaryView;
+
+@end
+
+@interface BillSummaryView : UITableViewCell
+
+@property(nonatomic) Bill *bill;
+@property(nonatomic) BOOL enableListGestures;
+@property(nonatomic) id<BillSummaryViewDelegate> delegate;
+
+@property(nonatomic, readonly) UIView *containerView;
+
+@property(nonatomic) UIColor *votingColor;
 
 - (instancetype)initWithBill:(Bill *)bill width:(CGFloat)width;
 
 - (void)pushBillView;
+
+- (void)resetView;
 
 @end
